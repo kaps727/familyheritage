@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12">
+      <button class="btn btn-success" 
+              (click)="onNewFestival()">New Festival</button>
+    </div>
+    <hr>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-festival-item 
+          *ngFor="let festivalEl of festivals; let i=index" 
+          [festival]="festivalEl" 
+          [idx]="i"></app-festival-item>
+    </div>
+</div>

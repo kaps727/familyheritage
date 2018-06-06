@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success"
+            (click)="onNewFamily()">New Family</button>
+  </div>
+  <hr>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-family-item 
+        *ngFor="let familyEl of families; let i=index" 
+        [family]="familyEl" 
+        [idx]="i"></app-family-item>
+  </div>
+</div>
